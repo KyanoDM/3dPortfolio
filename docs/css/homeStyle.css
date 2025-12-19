@@ -1,0 +1,432 @@
+html,
+body {
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    background-color: rgb(8, 8, 8);
+    height: 5vh;
+    line-height: 5vh;
+
+}
+
+.me {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding-top: 10vh;
+}
+
+.logo {
+    width: 400px;
+}
+
+.naam {
+    font-size: 70px;
+    color: rgb(2, 239, 252);
+    text-align: center;
+}
+
+.ondernaam {
+    text-align: center;
+    font-size: 30px;
+}
+
+.scrollbut {
+    font-family: 'Roboto', sans-serif;
+    max-width: 250px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(2, 186, 251);
+    border: none;
+    padding: 5px;
+    height: 45px;
+    transition: 0.5s;
+}
+
+.scrollbut:hover {
+    translate: 0px 5px;
+    background-color: rgba(2, 185, 251, 0.746);
+    transition: 0.25s;
+}
+
+.aboutme {
+    background-color: rgb(12, 12, 12);
+    text-align: center;
+    padding-top: 200px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.aboutimage {
+    width: 100%;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.SMTHABME {
+    color: gray;
+    font-weight: 600;
+    line-height: 100px;
+}
+
+.boutme {
+    font-size: 30px;
+}
+
+.white {
+    width: 100%;
+    height: 50px;
+}
+
+.styl {
+    font-size: 20px;
+
+}
+
+.styldiv {
+    min-height: 300px;
+}
+
+.modelprev {
+    width: 100%;
+    height: 100%;
+}
+
+.margintext {
+    margin-top: 10%;
+    text-align: justify;
+}
+
+.margintext2 {
+    margin-top: 10%;
+    text-align: justify;
+}
+
+.carimage {
+    min-width: 300px;
+    max-width: 40%;
+}
+
+.blok1 {
+    padding-top: 100px;
+}
+
+.titlesss {
+    font-size: 60px;
+    text-align: left;
+    color: rgb(2, 239, 252);
+}
+
+.works {
+    padding-top: 150px;
+}
+
+.kaartmodel {
+    min-height: 500px;
+    min-width: 500px;
+    background-color: rgb(8, 8, 8);
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+.modelprev2 {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+a {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.kaartmodel:nth-child(2) {
+    transition-delay: 300ms;
+}
+
+.hidden2 {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+
+.show2 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.navmid {
+    position: absolute;
+    translate: -50px;
+}
+
+.navlinks {
+    float: right;
+    padding-left: 15px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.navlinks:hover {
+    color: rgba(255, 255, 255, 0.678);
+}
+
+.buttonLogo {
+    width: 30px;
+    filter: invert(1);
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .logo {
+        width: 350px;
+    }
+
+    .naam {
+        font-size: 55px;
+    }
+
+    .ondernaam {
+        font-size: 25px;
+    }
+
+    .titlesss {
+        font-size: 50px;
+    }
+
+    .margintext,
+    .margintext2 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .logo {
+        width: 300px;
+    }
+
+    .naam {
+        font-size: 40px;
+    }
+
+    .ondernaam {
+        font-size: 20px;
+    }
+
+    .aboutimage {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .boutme {
+        font-size: 23px;
+    }
+
+    .titlesss {
+        font-size: 45px;
+        text-align: center !important;
+    }
+
+    .margintext,
+    .margintext2 {
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .kaartmodel {
+        min-height: 400px;
+        min-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 250px;
+    }
+
+    .naam {
+        font-size: 35px;
+    }
+
+    .ondernaam {
+        font-size: 18px;
+    }
+
+    .scrollbut {
+        max-width: 220px;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .aboutme {
+        padding-top: 100px;
+    }
+
+    .SMTHABME {
+        line-height: 50px;
+        font-size: 14px;
+    }
+
+    .boutme {
+        font-size: 20px;
+    }
+
+    .titlesss {
+        font-size: 35px;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+    }
+
+    .styl {
+        font-size: 18px;
+    }
+
+    .styldiv {
+        min-height: 250px;
+    }
+
+    .blok1 {
+        padding-top: 50px;
+    }
+
+    .works {
+        padding-top: 100px;
+    }
+
+    .kaartmodel {
+        min-height: 350px;
+        min-width: 280px;
+        margin-bottom: 30px;
+    }
+
+    .carimage {
+        min-width: 250px;
+        max-width: 90%;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .logo {
+        width: 200px;
+    }
+
+    .naam {
+        font-size: 28px;
+    }
+
+    .ondernaam {
+        font-size: 16px;
+    }
+
+    .me {
+        padding-top: 5vh;
+    }
+
+    .scrollbut {
+        max-width: 200px;
+        font-size: 13px;
+        height: 38px;
+    }
+
+    .aboutme {
+        padding-top: 80px;
+    }
+
+    .titlesss {
+        font-size: 28px;
+        text-align: center !important;
+    }
+
+    .boutme {
+        font-size: 18px;
+    }
+
+    .margintext,
+    .margintext2 {
+        font-size: 16px;
+    }
+
+    .kaartmodel {
+        min-height: 300px;
+        min-width: 100%;
+    }
+
+    .white {
+        height: 30px;
+    }
+
+    .buttonLogo {
+        width: 25px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navmid {
+        display: none;
+    }
+
+    nav {
+        height: 60px;
+        line-height: 55px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .naam {
+        font-size: 24px;
+    }
+
+    .ondernaam {
+        font-size: 14px;
+    }
+
+    .scrollbut {
+        max-width: 180px;
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .titlesss {
+        font-size: 24px;
+    }
+
+    .boutme {
+        font-size: 16px;
+    }
+
+    .navlinks {
+        padding-left: 10px;
+        padding-right: 15px;
+        font-size: 14px;
+    }
+}
