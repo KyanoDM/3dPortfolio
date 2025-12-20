@@ -18,6 +18,7 @@ nav {
     background-color: rgb(12, 12, 12);
     color: white;
     padding-top: 10vh;
+    width: 100vw;
 }
 
 .logo {
@@ -429,4 +430,5 @@ a {
         padding-right: 15px;
         font-size: 14px;
     }
+
 }
