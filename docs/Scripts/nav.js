@@ -37,4 +37,15 @@ document.addEventListener('DOMContentLoaded', function () {
     sections.forEach(function (section) {
         observer.observe(section);
     });
+
+    // The trigger line the observer uses sits mid-viewport, so the last section can
+    // never cross it once the page can't scroll any further. Force it active there.
+    var lastAnchor = navAnchors[navAnchors.length - 1];
+    window.addEventListener('scroll', function () {
+        var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        if (!atBottom) return;
+        navAnchors.forEach(function (a) {
+            a.classList.toggle('active', a === lastAnchor);
+        });
+    }, { passive: true });
 });
