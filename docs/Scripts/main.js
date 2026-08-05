@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!modal) return;
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
+            // Splide measures 0 width/height if mounted while display:none, which breaks
+            // arrow positioning, so mount/refresh only once the modal is actually visible.
+            mountSplides(modal);
         });
     });
 
@@ -38,19 +41,30 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.key === 'Escape') closeAllModals();
     });
 
-    // Splide carousels
-    document.querySelectorAll('.splide').forEach(function (el) {
-        new Splide(el, {
-            type: 'loop',
-            perPage: 3,
-            gap: '1rem',
-            autoplay: true,
-            pauseOnHover: true,
-            breakpoints: {
-                700: { perPage: 1 }
+    // Splide carousels (lazily mounted per modal, see mountSplides below)
+    var splideInstances = new Map();
+
+    function mountSplides(container) {
+        container.querySelectorAll('.splide').forEach(function (el) {
+            var instance = splideInstances.get(el);
+            if (instance) {
+                instance.refresh();
+                return;
             }
-        }).mount();
-    });
+            instance = new Splide(el, {
+                type: 'loop',
+                perPage: 3,
+                gap: '1rem',
+                autoplay: true,
+                pauseOnHover: true,
+                breakpoints: {
+                    700: { perPage: 1 }
+                }
+            });
+            instance.mount();
+            splideInstances.set(el, instance);
+        });
+    }
 
     // Copy Discord username to clipboard
     document.querySelectorAll('[data-copy]').forEach(function (btn) {

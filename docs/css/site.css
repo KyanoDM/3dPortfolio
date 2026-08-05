@@ -241,6 +241,83 @@ img {
     font-size: 1.3rem;
 }
 
+/* Games */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 48px;
+}
+
+.game-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.game-card:hover {
+    border-color: rgba(2, 239, 252, 0.35);
+    transform: translateY(-4px);
+}
+
+.game-card__image {
+    height: 200px;
+}
+
+.game-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-card__image--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 24px;
+    background: radial-gradient(circle at 50% 40%, rgba(2, 239, 252, 0.1), transparent 70%);
+    color: var(--text-muted);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.game-card__body {
+    padding: 20px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.game-card__body h3 {
+    margin-bottom: 4px;
+    font-size: 1.3rem;
+}
+
+.game-card__meta {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.game-card__body p:not(.game-card__meta) {
+    flex: 1;
+}
+
+.game-card__body .btn {
+    align-self: flex-start;
+}
+
 /* About */
 .about {
     display: flex;
@@ -507,6 +584,8 @@ img {
 }
 
 .map-slide img {
+    width: 100%;
+    max-width: 260px;
     border-radius: 10px;
     margin: 0 auto 12px;
 }
@@ -515,6 +594,14 @@ img {
     font-size: 0.85rem;
     color: var(--text-muted);
     font-family: 'Roboto', sans-serif;
+}
+
+/* Splide's own CSS sets .splide__list{height:100%}, which inside this fixed-position
+   modal resolves to a huge height instead of the row's actual content height, pushing
+   the prev/next arrows (centered on .splide's height) far below the visible slides. */
+.splide__track,
+.splide__list {
+    height: auto;
 }
 
 /* Scroll reveal */
