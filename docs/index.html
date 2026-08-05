@@ -1,177 +1,427 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Visualizer - High-Quality 3D Models</title>
     <meta name="description"
-        content="High-quality 3D models created by 3D Visualizer. Specialized in stylized modeling, texturing, and more.">
-    <meta name="keywords" content="3D Visualizer, 3D models, stylized modeling, texturing, high-quality models">
+        content="3D Visualizer (Kjell) creates high-quality stylised and hard-surface 3D models, modeled and textured end-to-end in Blender. Available for freelance commissions.">
+    <meta name="keywords"
+        content="3D Visualizer, 3D modeler, 3D models, stylized modeling, texturing, hard-surface, Blender">
     <meta property="og:title" content="3D Visualizer - High-Quality 3D Models">
     <meta property="og:description"
         content="High-quality 3D models created by 3D Visualizer. Specialized in stylized modeling, texturing, and more.">
     <meta property="og:image" content="Images/logo.png">
-    <meta property="og:url" content="https://3dvisualiser.site">
+    <meta property="og:url" content="https://kyanodm.github.io/3dPortfolio/">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="Images/logo.png" type="image/png">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3d Visualizer - High-Quality 3D Models</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/homeStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700;800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/nav.css">
+
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
-    <script src="
-            https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
-            "></script>
-    <link href="
-            https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
-            " rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script defer src="Scripts/scrollanimation.js"></script>
-    <link rel="icon" href="Images/logo.png" type="image/x-icon">
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav> <span class="navmid">3D Visualizer </span> <a href="Projects.html" class="navlinks"> Projects </a> <a
-            href="index.html" class="navlinks"> Home </a></nav>
-    <div class="me justify-content-center row">
-        <img src="Images/logo.png" class="logo hidden" alt="Logo of 3dvisualiser">
-        <span class="naam hidden">Kjell, 3D modeler</span>
-        <span class="ondernaam hidden">Specialized in making high-quality 3D models.</span>
-        <br><br><br>
-        <div class="justify-content-center row mt-3 hidden">
-            <div class="d-flex justify-content-center">
-                <a href="#aboutme">
-                    <button class="scrollbut mb-5">Scroll down to learn more &#8595;</button>
-                </a>
-            </div>
-
+    <header class="site-nav">
+        <div class="site-nav__inner">
+            <a href="#top" class="brand">
+                <img src="Images/logo.png" alt="3D Visualizer logo">
+                <span>3D Visualizer</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#work" data-section="work">Work</a>
+                <a href="#about" data-section="about">About</a>
+                <a href="#process" data-section="process">Process</a>
+                <a href="#contact" data-section="contact">Contact</a>
+                <a href="mailto:kjelldemaertelaere.2008@gmail.com" class="nav-cta">Email Me</a>
+            </nav>
         </div>
-        <div class="aboutme " id="aboutme">
-            <div class="col-12 row justify-content-center">
-                <div class="col-11 col-lg-5 mb-5 hidden">
-                    <img src="Images/about.png" class="aboutimage" alt="3d model and blender image">
-                </div>
-                <div class="col-11 col-lg-5 mb-5 hidden2">
-                    <span class="SMTHABME">SOMETHING ABOUT ME</span> <br>
-                    <span class=boutme>I am a 3d modeler, I've been around the 3d community for around 10 months.
-                        I am 15 years old and i've worked for many people, mostly underpaid, which I am trying to avoid
-                        right now.
-                        For 3d modeling, I've hired a concept artist to asure u will achieve an original model.</span>
-                </div>
-            </div>
-        </div>
-        <div class="white"></div>
-        <center>
-            <div class="blok1 ">
+    </header>
 
-                <div class="col-12 row justify-content-center " style="padding-top: 50px;">
-                    <div class="col-11 col-md-4 styl styldiv hidden">
-                        <h1 class="mb-5 titlesss">My Styles</h1>
-                        <div class="margintext">I am mostly a stylised modeler but I can go from low-poly - high poly.
-                            My
-                            abilities don't go
-                            too far since I do
-                            everything in blender texturing, modeling, optimizing etc …</div>
-
-                    </div>
-                    <div class="col-11 col-md-4 styldiv hidden2"><model-viewer class="modelprev " src="Models/bat.glb"
-                            auto-rotate disable-zoom rotation-per-second="45deg" auto-rotate-delay="1000"
-                            camera-orbit="280deg"></model-viewer></div>
+    <main id="main">
+        <section class="hero" id="top">
+            <div class="container hero__inner">
+                <p class="eyebrow">3D MODELING</p>
+                <h1>3D <span>Visualizer</span></h1>
+                <p class="hero__tagline">I'm Kjell, a 3D modeler creating stylised & hard-surface props end-to-end
+                    in Blender: from first block-out to final render-ready asset.</p>
+                <div class="hero__actions">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
-        </center>
-        <div class="white "></div>
-        <center>
-            <div class="blok1">
-                <h1 class="mb-5 d-lg-none titlesss" style="text-align: center; padding-bottom: 50px;">Texturing</h1>
+        </section>
 
-                <div class="col-12 row justify-content-center">
-                    <div class="col-11 col-lg-4 styldiv mb-5 hidden">
-                        <div class="homecarousel">
-                            <div class="splide">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
-                                        <li class="splide__slide"><img src="Images/bat/1.png" class="carimage"
-                                                alt="photo of a bat 1"></li>
-                                        <li class="splide__slide"><img src="Images/bat/2.png" class="carimage"
-                                                alt="photo of a bat 2"></li>
-                                        <li class="splide__slide"><img src="Images/bat/3.png" class="carimage"
-                                                alt="photo of a bat 3"></li>
-                                        <li class="splide__slide"><img src="Images/bat/4.png" class="carimage"
-                                                alt="photo of a bat 4"></li>
-                                    </ul>
-                                </div>
-                            </div>
+        <section class="section" id="work">
+            <div class="container">
+                <p class="eyebrow reveal">PORTFOLIO</p>
+                <h2 class="reveal">Selected Work</h2>
+                <p class="section__lead reveal">A few recent hard-surface props, fully modeled, UV'd and textured.
+                    Drag any model below to look around, or open the full texture breakdown.</p>
+
+                <div class="work-grid">
+                    <article class="work-card reveal">
+                        <div class="work-card__viewer">
+                            <model-viewer src="Models/axe.glb" auto-rotate camera-controls disable-zoom
+                                rotation-per-second="30deg" camera-orbit="280deg" shadow-intensity="1"
+                                alt="3D model of a stylised axe"></model-viewer>
                         </div>
-                    </div>
-                    <div class="col-11 col-lg-4 styl styldiv mb-5 hidden2">
-                        <h1 class="mb-5 d-none d-lg-block titlesss">Texturing</h1>
-                        <div class="margintext2 hidden2">
-                            All of my textures are either hand painted or procedural which increases the abilities to
-                            change
-                            and
-                            manipulate the texture. The workflow I use for texturing requires a bit more time than most
-                            methods. I
-                            use bump maps, roughness maps, diffuse maps, and metallic map, they are made procedural or
-                            either
-                            handpainted My modelling skills I can model hard surface objects but more organic models
-                            like
-                            humans,
-                            realistic food are out of the box for right now.
+                        <div class="work-card__body">
+                            <h3>Axe</h3>
+                            <button class="btn btn-ghost" data-modal-open="axe">Texture Breakdown</button>
                         </div>
-                    </div>
+                    </article>
 
+                    <article class="work-card reveal">
+                        <div class="work-card__viewer">
+                            <model-viewer src="Models/pipe.glb" auto-rotate camera-controls disable-zoom
+                                rotation-per-second="30deg" camera-orbit="280deg" shadow-intensity="1"
+                                alt="3D model of a pipe"></model-viewer>
+                        </div>
+                        <div class="work-card__body">
+                            <h3>Pipe</h3>
+                            <button class="btn btn-ghost" data-modal-open="pipe">Texture Breakdown</button>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <div class="work-card__viewer">
+                            <model-viewer src="Models/scythe.glb" auto-rotate camera-controls disable-zoom
+                                rotation-per-second="30deg" camera-orbit="280deg" shadow-intensity="1"
+                                alt="3D model of a scythe"></model-viewer>
+                        </div>
+                        <div class="work-card__body">
+                            <h3>Scythe</h3>
+                            <button class="btn btn-ghost" data-modal-open="scythe">Texture Breakdown</button>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <div class="work-card__viewer">
+                            <model-viewer src="Models/bat.glb" auto-rotate camera-controls disable-zoom
+                                rotation-per-second="30deg" camera-orbit="280deg" shadow-intensity="1"
+                                alt="3D model of a spiked bat"></model-viewer>
+                        </div>
+                        <div class="work-card__body">
+                            <h3>Bat</h3>
+                            <button class="btn btn-ghost" data-modal-open="bat">Texture Breakdown</button>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </center>
-        <div class="works">
-            <h1 class="mb-5 titlesss hidden" style="text-align: center;">Some Of My Projects</h1>
-            <div class="col-12 justify-content-around row" style="margin: 0px !important;">
-                <a href="Projects.html" class="col-12 col-lg-5 kaartmodel hidden">
-                    <model-viewer class="modelprev2" src="Models/bat.glb" auto-rotate disable-zoom
-                        rotation-per-second="45deg" auto-rotate-delay="1000" camera-orbit="280deg"></model-viewer>
-                </a>
-                <a href="Projects.html" class="col-12 col-lg-5 kaartmodel hidden">
-                    <model-viewer class="modelprev2" src="Models/pipe.glb" auto-rotate disable-zoom
-                        rotation-per-second="45deg" auto-rotate-delay="1000" camera-orbit="280deg"></model-viewer>
-                </a>
+        </section>
+
+        <section class="section section--alt" id="about">
+            <div class="container about">
+                <div class="about__image reveal">
+                    <img src="Images/about.png" alt="Kjell at work">
+                </div>
+                <div class="about__text reveal">
+                    <p class="eyebrow">ABOUT</p>
+                    <h2>About Me</h2>
+                    <p>Hi, I'm Kjell, the 3D modeler behind 3D Visualizer. I focus on stylised and hard-surface
+                        props, working end-to-end in Blender: modeling, UVs, texturing and optimization. On every
+                        commission I work with a concept artist first, so the final model is original and matches
+                        the brief before I touch a single vertex.</p>
+                    <p>I've been active in the 3D community for about 10 months, and I'm currently open to new
+                        freelance commissions.</p>
+                </div>
             </div>
-            <div class="white"></div>
+        </section>
+
+        <section class="section" id="process">
+            <div class="container">
+                <p class="eyebrow reveal">PROCESS</p>
+                <h2 class="reveal">How I Work</h2>
+                <div class="process-grid">
+                    <div class="process-card reveal">
+                        <h3><span class="num">1</span> Modeling</h3>
+                        <ul>
+                            <li>Mostly stylised, with range from low-poly to high-poly</li>
+                            <li>Hard-surface focus: props, weapons, objects</li>
+                            <li>Full workflow in Blender, start to finish</li>
+                            <li>Organic modeling (characters, food) not yet part of my specialty</li>
+                        </ul>
+                    </div>
+                    <div class="process-card reveal">
+                        <h3><span class="num">2</span> Texturing</h3>
+                        <ul>
+                            <li>Hand-painted or fully procedural textures</li>
+                            <li>Diffuse, roughness, bump and metallic maps</li>
+                            <li>Built to be easy to adjust and refine later</li>
+                            <li>Every project ships with a full map breakdown</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt section--contact" id="contact">
+            <div class="container contact">
+                <p class="eyebrow">GET IN TOUCH</p>
+                <h2>Let's Build Something Great</h2>
+                <p>Have a project in mind? Send me the details and I'll get back to you with a quote.</p>
+                <a class="btn btn-primary btn-lg" href="mailto:kjelldemaertelaere.2008@gmail.com">Email Me</a>
+                <div class="contact__actions">
+                    <a class="btn btn-icon" href="mailto:kjelldemaertelaere.2008@gmail.com">
+                        <img src="Images/email.png" alt=""><span>Email</span>
+                    </a>
+                    <button class="btn btn-icon" data-copy="3d_visualiser">
+                        <img src="Images/discord.png" alt=""><span class="copy-label">3d_visualiser</span>
+                    </button>
+                </div>
+                <p class="contact__email"><a
+                        href="mailto:kjelldemaertelaere.2008@gmail.com">kjelldemaertelaere.2008@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <span>&copy; <span id="year"></span> 3D Visualizer, site by Kyano De Maertelaere</span>
+            <a href="mailto:kjelldemaertelaere.2008@gmail.com">kjelldemaertelaere.2008@gmail.com</a>
         </div>
-        <div class="d-flex justify-content-center">
-            <a href="Projects.html">
-                <button class="scrollbut mb-2 hidden">View More Projects</button>
-            </a>
-        </div>
-        <div class="d-flex justify-content-center">
-            <a href="mailto: kjelldemaertelaere.2008@gmail.com">
-                <button class="scrollbut mb-5 hidden" style="padding-left: 19px; padding-right: 19px;"><img
-                        src="Images/email.png" class="buttonLogo" alt="email icon"></button>
-            </a>
-            <a style="padding-left: 10px;">
-                <button class="scrollbut mb-5 hidden" style="padding-left: 19px; padding-right: 19px;"
-                    onclick="copyToClipboard('3d_visualiser')"><img src="Images/discord.png" class="buttonLogo"
-                        alt="discord logo icon"></button>
-            </a>
+    </footer>
+
+    <!-- Texture breakdown modals -->
+    <div class="modal" id="modal-axe" data-modal>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+            <div class="modal__header">
+                <h3>Axe: Texture Breakdown</h3>
+                <button class="btn btn-ghost" data-bg-toggle>Toggle Background</button>
+            </div>
+            <div class="modal__viewer">
+                <model-viewer src="Models/axe.glb" auto-rotate camera-controls rotation-per-second="30deg"
+                    camera-orbit="280deg" alt="3D model of a stylised axe"></model-viewer>
+            </div>
+            <p class="modal__maps-title">Diffuse & Roughness Maps</p>
+            <section class="splide" aria-label="Axe texture maps">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/axe/1.png" alt="Axe base straps diffuse map">
+                                <figcaption>base_straps_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/axe/2.png" alt="Axe straps diffuse map">
+                                <figcaption>straps_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/axe/4.png" alt="Axe head diffuse map">
+                                <figcaption>axe_head</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/axe/5.png" alt="Axe handle diffuse map">
+                                <figcaption>handle_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/axe/3.png" alt="Axe heightmap">
+                                <figcaption>heightmap</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
+
+    <div class="modal" id="modal-pipe" data-modal>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+            <div class="modal__header">
+                <h3>Pipe: Texture Breakdown</h3>
+                <button class="btn btn-ghost" data-bg-toggle>Toggle Background</button>
+            </div>
+            <div class="modal__viewer">
+                <model-viewer src="Models/pipe.glb" auto-rotate camera-controls rotation-per-second="30deg"
+                    camera-orbit="280deg" alt="3D model of a pipe"></model-viewer>
+            </div>
+            <p class="modal__maps-title">Diffuse & Roughness Maps</p>
+            <section class="splide" aria-label="Pipe texture maps">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/pipe/1.png" alt="Pipe part 02 diffuse map">
+                                <figcaption>pipe_part_02_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/pipe/2.png" alt="Pipe part 01 diffuse map">
+                                <figcaption>pipe_part_01_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/pipe/3.png" alt="Pipe straps diffuse map">
+                                <figcaption>pipe_straps_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/pipe/4.png" alt="Pipe strap diffuse map">
+                                <figcaption>pipe_strap_diffuse</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('.splide').mount();
-        });
-    </script>
-    <center style="background-color: rgb(12,12,12);">Built By <a href="#"
-            style="color: rgb(33,37,41); text-decoration: none;"> Kyano De Maertelaere </a></center>
-    <script src="Scripts/projectsmallscreen.js"></script>
-    <script src="Scripts/copyUsername.js"></script>
+
+    <div class="modal" id="modal-scythe" data-modal>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+            <div class="modal__header">
+                <h3>Scythe: Texture Breakdown</h3>
+                <button class="btn btn-ghost" data-bg-toggle>Toggle Background</button>
+            </div>
+            <div class="modal__viewer">
+                <model-viewer src="Models/scythe.glb" auto-rotate camera-controls rotation-per-second="30deg"
+                    camera-orbit="280deg" alt="3D model of a scythe"></model-viewer>
+            </div>
+            <p class="modal__maps-title">Diffuse & Roughness Maps</p>
+            <section class="splide" aria-label="Scythe texture maps">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/1.png" alt="Scythe horns roughness map">
+                                <figcaption>scythe_horns_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/2.png" alt="Scythe end roughness map">
+                                <figcaption>scythe_end_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/3.png"
+                                    alt="Scythe handle roughness map">
+                                <figcaption>scythe_handle_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/4.png" alt="Scythe upper roughness map">
+                                <figcaption>scythe_upper_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/5.png" alt="Scythe ring roughness map">
+                                <figcaption>scythe_ring_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/6.png" alt="Scythe blade roughness map">
+                                <figcaption>scythe_blade_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/7.png"
+                                    alt="Scythe middle ring roughness map">
+                                <figcaption>scythe_middleRing_roughness</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/8.png" alt="Scythe blade texture">
+                                <figcaption>scythe_blade_texture</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/9.png" alt="Scythe end texture">
+                                <figcaption>scythe_end_texture</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/10.png" alt="Scythe handle texture">
+                                <figcaption>scythe_handle_texture</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/11.png"
+                                    alt="Scythe handle texture, alternate">
+                                <figcaption>scythe_handle_texture_alt</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/12.png" alt="Scythe horns texture">
+                                <figcaption>scythe_horns_texture</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/13.png" alt="Scythe upper texture">
+                                <figcaption>scythe_upper_texture</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/scythe/14.png" alt="Scythe ring texture">
+                                <figcaption>scythe_ring_texture</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-bat" data-modal>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close aria-label="Close">&times;</button>
+            <div class="modal__header">
+                <h3>Bat: Texture Breakdown</h3>
+                <button class="btn btn-ghost" data-bg-toggle>Toggle Background</button>
+            </div>
+            <div class="modal__viewer">
+                <model-viewer src="Models/bat.glb" auto-rotate camera-controls rotation-per-second="30deg"
+                    camera-orbit="280deg" alt="3D model of a spiked bat"></model-viewer>
+            </div>
+            <p class="modal__maps-title">Diffuse & Roughness Maps</p>
+            <section class="splide" aria-label="Bat texture maps">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/bat/1.png" alt="Bat handle diffuse map">
+                                <figcaption>handle_diffuse_bat</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/bat/2.png"
+                                    alt="Bat handle diffuse map, alternate">
+                                <figcaption>handle_diffuse</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/bat/3.png" alt="Bat base spikes texture">
+                                <figcaption>base_spikes_texture</figcaption>
+                            </figure>
+                        </li>
+                        <li class="splide__slide">
+                            <figure class="map-slide"><img src="Images/bat/4.png" alt="Bat heightmap">
+                                <figcaption>heightmap</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="Scripts/nav.js"></script>
+    <script src="Scripts/main.js"></script>
 </body>
 
 </html>
