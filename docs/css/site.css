@@ -310,7 +310,18 @@ img {
     margin-bottom: 12px;
 }
 
-.game-card__body p:not(.game-card__meta) {
+.game-card__stats {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: var(--bg-elevated-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 12px;
+}
+
+.game-card__body p:not(.game-card__meta):not(.game-card__stats) {
     flex: 1;
 }
 
