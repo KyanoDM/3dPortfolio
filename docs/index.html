@@ -192,10 +192,7 @@
 
         <section class="section" id="about">
             <div class="container about">
-                <div class="about__image reveal">
-                    <img src="Images/about.png" alt="Kjell at work">
-                </div>
-                <div class="about__text reveal">
+                <div class="about__text about__text--wide reveal">
                     <p class="eyebrow">ABOUT</p>
                     <h2>About Me</h2>
                     <p>Hi, I'm Kjell, the 3D modeler behind 3D Visualizer. I focus on stylised and hard-surface
@@ -239,18 +236,44 @@
             <div class="container contact">
                 <p class="eyebrow">GET IN TOUCH</p>
                 <h2>Let's Build Something Great</h2>
-                <p>Have a project in mind? Send me the details and I'll get back to you with a quote.</p>
-                <a class="btn btn-primary btn-lg" href="mailto:kjelldemaertelaere.2008@gmail.com">Email Me</a>
-                <div class="contact__actions">
-                    <a class="btn btn-icon" href="mailto:kjelldemaertelaere.2008@gmail.com">
-                        <img src="Images/email.png" alt=""><span>Email</span>
-                    </a>
-                    <button class="btn btn-icon" data-copy="3d_visualiser">
-                        <img src="Images/discord.png" alt=""><span class="copy-label">3d_visualiser</span>
-                    </button>
+                <p>Have a project in mind? Send me the details below and I'll get back to you with a quote.</p>
+
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                    <input type="hidden" name="subject" value="New commission inquiry from 3dvisualiser.site">
+                    <input type="checkbox" name="botcheck" class="contact-form__honeypot" tabindex="-1"
+                        autocomplete="off">
+
+                    <div class="contact-form__row">
+                        <div class="contact-form__field">
+                            <label for="contactName">Name</label>
+                            <input type="text" id="contactName" name="name" required>
+                        </div>
+                        <div class="contact-form__field">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" required>
+                        </div>
+                    </div>
+                    <div class="contact-form__field">
+                        <label for="contactMessage">Project details</label>
+                        <textarea id="contactMessage" name="message" rows="5"
+                            placeholder="What are you looking to have modeled?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    <p class="contact-form__status" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="contact__alt">
+                    <span>Prefer something quicker?</span>
+                    <div class="contact__actions">
+                        <button class="btn btn-icon" data-copy="3d_visualiser">
+                            <img src="Images/discord.png" alt=""><span class="copy-label">3d_visualiser</span>
+                        </button>
+                        <a class="btn btn-icon" href="mailto:kjelldemaertelaere.2008@gmail.com">
+                            <img src="Images/email.png" alt=""><span>kjelldemaertelaere.2008@gmail.com</span>
+                        </a>
+                    </div>
                 </div>
-                <p class="contact__email"><a
-                        href="mailto:kjelldemaertelaere.2008@gmail.com">kjelldemaertelaere.2008@gmail.com</a></p>
             </div>
         </section>
     </main>

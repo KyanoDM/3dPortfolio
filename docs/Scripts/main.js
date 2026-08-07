@@ -125,4 +125,47 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Contact form (Web3Forms)
+    var contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            var status = contactForm.querySelector('.contact-form__status');
+            var submitBtn = contactForm.querySelector('button[type="submit"]');
+            var originalBtnText = submitBtn.textContent;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            status.textContent = '';
+            status.classList.remove('is-error', 'is-success');
+
+            var data = Object.fromEntries(new FormData(contactForm));
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify(data)
+            })
+                .then(function (response) { return response.json(); })
+                .then(function (result) {
+                    if (result.success) {
+                        status.textContent = "Thanks! I'll get back to you soon.";
+                        status.classList.add('is-success');
+                        contactForm.reset();
+                    } else {
+                        status.textContent = result.message || 'Something went wrong. Please email me directly instead.';
+                        status.classList.add('is-error');
+                    }
+                })
+                .catch(function () {
+                    status.textContent = 'Something went wrong. Please email me directly instead.';
+                    status.classList.add('is-error');
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                });
+        });
+    }
 });

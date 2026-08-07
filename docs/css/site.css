@@ -299,6 +299,10 @@ img {
 .game-card__body h3 {
     margin-bottom: 4px;
     font-size: 1.3rem;
+    line-height: 1.25;
+    min-height: 2.5em;
+    display: flex;
+    align-items: flex-end;
 }
 
 .game-card__meta {
@@ -341,18 +345,13 @@ img {
     flex-wrap: wrap;
 }
 
-.about__image {
-    flex: 1 1 380px;
-}
-
-.about__image img {
-    width: 100%;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-}
-
 .about__text {
     flex: 1 1 420px;
+}
+
+.about__text--wide {
+    flex: 1 1 100%;
+    max-width: 760px;
 }
 
 /* Process */
@@ -459,22 +458,93 @@ img {
     filter: invert(63%) sepia(84%) saturate(2476%) hue-rotate(146deg) brightness(101%) contrast(101%);
 }
 
-.contact__email {
-    margin-top: 18px;
-    font-family: 'Barlow', sans-serif;
-    font-size: 1.1rem;
+.contact-form {
+    text-align: left;
+    margin: 40px auto 0;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.contact-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-form__field label {
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--text-muted);
 }
 
-.contact__email a {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    background: var(--bg-elevated-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
     color: var(--text);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    resize: vertical;
 }
 
-.contact__email a:hover {
-    color: var(--accent);
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
     border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(2, 239, 252, 0.15);
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+.contact-form__honeypot {
+    display: none;
+}
+
+.contact-form__status {
+    margin: 0;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+
+.contact-form__status.is-success {
+    color: var(--accent);
+}
+
+.contact-form__status.is-error {
+    color: #ff6b6b;
+}
+
+.contact__alt {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.contact__alt>span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 560px) {
+    .contact-form__row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Footer */
