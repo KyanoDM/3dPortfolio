@@ -354,6 +354,10 @@ img {
     max-width: 760px;
 }
 
+.about__text p {
+    font-size: 1.15rem;
+}
+
 /* Process */
 .process-grid {
     display: grid;
