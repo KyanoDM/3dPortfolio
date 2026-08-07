@@ -321,6 +321,10 @@ img {
     margin-bottom: 12px;
 }
 
+.game-card__stats[aria-hidden="true"] {
+    visibility: hidden;
+}
+
 .game-card__body p:not(.game-card__meta):not(.game-card__stats) {
     flex: 1;
 }
